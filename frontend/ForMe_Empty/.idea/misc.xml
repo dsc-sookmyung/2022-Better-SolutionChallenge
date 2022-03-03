@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/drawable/light_green_round_rectangle.xml" value="0.122" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/drawable/round_background_border.xml" value="0.1" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_fragment_page1.xml" value="0.1" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_fragment_page2.xml" value="0.1" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_fragment_page3.xml" value="0.1" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/fragment_board.xml" value="0.2" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/fragment_my.xml" value="0.176" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/fragment_record.xml" value="0.10989583333333333" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/fragment_setting.xml" value="0.1" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/list_item_recommend.xml" value="0.109375" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/list_item_record.xml" value="0.1" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/menu/bottom_nav.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

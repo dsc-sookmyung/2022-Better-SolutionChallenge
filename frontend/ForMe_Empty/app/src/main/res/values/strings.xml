@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ForMe_Empty</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="primary_color">Primary color</string>
+    <string name="button">Button</string>
+    <string name="secondary_color">Secondary color</string>
+    <string name="email_icon">email icon</string>
+
+    <!-- 나의 식단 기록 -->
+    <string name="record1">시금치파스타</string>
+    <string name="record2">감자 샐러드</string>
+    <string name="record3">월남쌈</string>
+    <string name="record4">호박죽</string>
+    <string name="record5">과일 요거트</string>
+
+    <!-- 오늘 뭐 먹지? -->
+    <string name="recommend1">두부 스테이크</string>
+    <string name="recommend2">퀴노아 김 크로켓</string>
+    <string name="recommend3">양념 두부 무 지짐</string>
+    <string name="recommend4">생 브라우니</string>
+    <string name="recommend5">베이크드 빈 토스트</string>
+</resources>
