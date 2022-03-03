@@ -11,6 +11,7 @@ import javax.persistence.Id;
 @Entity
 @Data
 public class Dashboard {
+
     @Id
     private Long id;
 
