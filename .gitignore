@@ -1,3 +1,5 @@
 /.gradle/
 /build/
 /.idea/
+/backend/forme/.gradle/.idea
+/backend/forme/build

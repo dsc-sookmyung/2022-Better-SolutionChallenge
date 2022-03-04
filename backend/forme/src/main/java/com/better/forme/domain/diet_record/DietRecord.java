@@ -1,6 +1,7 @@
 package com.better.forme.domain.diet_record;
 
 import com.better.forme.domain.user.User;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -14,11 +15,11 @@ public class DietRecord {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long diet_index;
+    private Long id;
 
-    @OneToOne
-    @JoinColumn(name = "user_key", nullable = false)
-    private User user;
+//    @ManyToOne
+//    @JoinColumn(name = "user_key", nullable = false)
+//    private User user;
 
     @Column(nullable = false)
     private Date date;
@@ -49,4 +50,18 @@ public class DietRecord {
 
     @Column(nullable = false)
     private Boolean beef_check;
+
+    @Builder
+    public DietRecord(Date date, Integer meal_category, String food_name, String food_desc, Boolean egg_check, Boolean dairy_check, Boolean fish_check, Boolean birds_check, Boolean pork_check, Boolean beef_check) {
+        this.date =date;
+        this.meal_category=meal_category;
+        this.food_name=food_name;
+        this.food_desc=food_desc;
+        this.egg_check=egg_check;
+        this.dairy_check=dairy_check;
+        this.fish_check=fish_check;
+        this.birds_check=birds_check;
+        this.pork_check=pork_check;
+        this.beef_check=beef_check;
+    }
 }
