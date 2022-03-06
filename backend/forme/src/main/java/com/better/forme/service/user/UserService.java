@@ -14,8 +14,8 @@ import javax.transaction.Transactional;
 public class UserService {
     private final UserRepository userRepository;
 
-    public UserResponseDto findById (Long user_key){
-        User entity = userRepository.findById(user_key)
+    public UserResponseDto findById (Long id){
+        User entity = userRepository.findById(id)
                 .orElseThrow(()->new IllegalArgumentException("게시글노"));
         return new UserResponseDto(entity);
     }

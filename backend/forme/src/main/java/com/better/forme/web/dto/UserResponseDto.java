@@ -10,11 +10,11 @@ import javax.persistence.Column;
 @NoArgsConstructor
 public class UserResponseDto {
 
-    private Long user_key;
+    private Long id;
     private String nickname;
 
     public UserResponseDto(User entity){
-        this.user_key = entity.getUser_key();
+        this.id = entity.getId();
         this.nickname = entity.getNickname();
 
     }

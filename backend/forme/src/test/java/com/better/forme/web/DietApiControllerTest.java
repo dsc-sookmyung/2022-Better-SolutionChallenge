@@ -1,11 +1,8 @@
 package com.better.forme.web;
 
-import com.better.forme.domain.diet_record.DietRecord;
-import com.better.forme.domain.diet_record.DietRecordRepository;
-import com.better.forme.domain.posts.Posts;
-import com.better.forme.domain.posts.PostsRepository;
-import com.better.forme.web.dto.DietSaveRequestDto;
-import com.better.forme.web.dto.PostsSaveRequestDto;
+
+import com.better.forme.domain.user.UserRepository;
+import com.better.forme.web.dto.UserResponseDto;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,32 +28,12 @@ public class DietApiControllerTest {
     private TestRestTemplate restTemplate;
 
     @Autowired
-    private PostsRepository postsRepository;
+    private UserRepository userRepository;
 
     @After
     public void tearDown() throws Exception {
-        postsRepository.deleteAll();
+        userRepository.deleteAll();
     }
-    @Test
-    public void uploadPost() throws Exception {
-        // given
-        String title = "title";
 
-        PostsSaveRequestDto requestDto = PostsSaveRequestDto
-                .builder()
-                .title(title)
-                .build();
 
-        String url = "http://localhost:" + port + "/api/v1/posts";
-
-        // when
-        ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, requestDto, Long.class);
-
-        // then
-        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(responseEntity.getBody()).isGreaterThan(0L);
-
-        List<Posts> all = postsRepository.findAll();
-        assertThat(all.get(0).getTitle()).isEqualTo(title);
-    }
 }
