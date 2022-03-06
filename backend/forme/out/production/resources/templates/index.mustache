@@ -1,0 +1,53 @@
+<!--<!DOCTYPE HTML>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>스프링 부트 웹 서비스</title>-->
+<!--    <meta http-equiv="Content-Type" content="text/html ; charset=UTF-8" />-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>스프링부트로 시작하는 웹 서비스</h1>-->
+<!--</body>-->
+<!--</html>-->
+
+{{>layout/header}}
+
+<h1>스프링부트로 시작하는 웹 서비스</h1>
+<div class="col-md-12">
+    <div class="row">
+        <div class = "col-md-6">
+            <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+        </div>
+    </div>
+    <br>
+    <!-- 목록 출력 영역 -->
+    <table class="table table-horizontal table-bordered">
+        <thead class="thead-strong">
+        <tr>
+            <th>게시글 번호</th>
+            <th>제목</th>
+            <th>최종 수정일</th>
+            <th>check1</th>
+            <th>check2</th>
+            <th>check3</th>
+            <th>check4</th>
+            <th>check5</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#posts}}
+            <tr>
+                <td>{{id}}</td>
+                <td><a href="/posts/update/{{id}}">{{title}} </a> </td>
+                <td>{{modifiedDate}}</td>
+                <td>{{check1}}</td>
+                <td>{{check2}}</td>
+                <td>{{check3}}</td>
+                <td>{{check4}}</td>
+                <td>{{check5}}</td>
+            </tr>
+        {{/posts}}
+        </tbody>
+    </table>
+</div>
+
+{{>layout/footer}}
