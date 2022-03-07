@@ -20,9 +20,12 @@ public class Likes {
     @JoinColumn(name = "user_key", nullable = false)
     private User user;
 
-    @OneToOne
-    @JoinColumn(name = "recipe_index", nullable = false)
-    private RecipeRecord recipe_index;
+    // @OneToOne
+    // @JoinColumn(name = "recipe_index", nullable = false)
+    // private RecipeRecord recipe_index;
+
+    // temp var for LikeRepository Query
+    private Long recipe_index;
 
     @Column(nullable = false)
     private Boolean likes;

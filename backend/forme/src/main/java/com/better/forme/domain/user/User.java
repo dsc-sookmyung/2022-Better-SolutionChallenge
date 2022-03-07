@@ -17,7 +17,6 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @Entity
-@Data
 public class User {
 
     @Id

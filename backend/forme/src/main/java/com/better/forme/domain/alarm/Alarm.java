@@ -16,9 +16,9 @@ public class Alarm implements Serializable {
     @Id
     private Long alarm_id;
 
-    @MapsId("user_key")  //alarm_id.userKey 매핑
+    // @MapsId("user_key")  //alarm_id.userKey 매핑
     @ManyToOne
-    @JoinColumn(name = "user_key", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(nullable = false)

@@ -5,19 +5,25 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Getter
 @NoArgsConstructor
 @Entity
 public class Badge {
 
-    @EmbeddedId
-    private BadgeId badge_id;
+//    @EmbeddedId
+//    private BadgeId badge_id;
 
-    @MapsId("userKey")  //badge_id.userKey 매핑
-    @OneToOne
-    @JoinColumn(name = "user_key", nullable = false)
-    private User user;
+//    @Id
+//    //@MapsId("userKey")  //badge_id.userKey 매핑
+//    @OneToOne
+//    @JoinColumn(name = "user_key", nullable = false)
+//    private User user;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(nullable = false)
     private Boolean badge1;
