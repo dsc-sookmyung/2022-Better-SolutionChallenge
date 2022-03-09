@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Long> {
-    @Query("SELECT p FROM User p ORDER BY p.id DESC ")
+    @Query("SELECT p.id, p.age FROM User p ORDER BY p.id DESC ")
     List<User> findAllDesc_User();
 }
