@@ -3,36 +3,37 @@ package com.better.forme.domain.user;
 import com.better.forme.domain.alarm.Alarm;
 import com.better.forme.domain.badge.Badge;
 import com.better.forme.domain.character.TomatoCharacter;
+import com.better.forme.domain.diet_record.DietRecord;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Time;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 @NoArgsConstructor
 @Entity
-@Data
 public class User {
 
     @Id
-    @EmbeddedId
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_key;
+    private Long userId;
 
-//    @OneToMany(mappedBy = "user")
-//    private List<Alarm> alarm;
-//
-//    @OneToOne(mappedBy = "user")
-//    private Badge badge;
-//
-//    @OneToOne(mappedBy = "user")
-//    private TomatoCharacter tomatoCharacter;
+    @OneToOne(mappedBy = "user")
+    private Alarm alarm;
 
-    @Column(length = 500, nullable = false)
-    private String id;
+    @OneToOne(mappedBy = "user")
+    private Badge badge;
+
+    @OneToOne(mappedBy = "user")
+    private TomatoCharacter tomatoCharacter;
+
+    @Column(length = 500, nullable = false , name="id_email")
+    private String idEmail;
 
     @Column(length = 500, nullable = false)
     private String email;
@@ -43,8 +44,11 @@ public class User {
     @Column(nullable = false)
     private Integer age;
 
-    @Column(nullable = false)
-    private Integer current_type, goal_type;
+    @Column(nullable = false ,name="current_type")
+    private Integer currentType;
+
+    @Column(nullable = false, name="goal_type")
+    private Integer goalType;
 
     @Column(nullable = false)
     private Integer day1;
@@ -56,9 +60,10 @@ public class User {
 
     private Time mealtime2, mealtime3;
 
-    @Column(nullable = false)
-    private Boolean on_alarm;
+    @Column(nullable = false , name="on_alarm")
+    private Boolean onAlarm;
 
     @Column(nullable = false)
     private String nickname;
+
 }

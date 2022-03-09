@@ -14,11 +14,11 @@ import java.io.Serializable;
 public class Alarm implements Serializable {
 
     @Id
-    private Long alarm_id;
+    private Long userId;
 
-    @MapsId("user_key")  //alarm_id.userKey 매핑
-    @ManyToOne
-    @JoinColumn(name = "user_key", nullable = false)
+    @MapsId("userId")  //Alarm.userId 매핑
+    @OneToOne
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(nullable = false)
