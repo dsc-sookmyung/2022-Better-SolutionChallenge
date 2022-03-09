@@ -12,11 +12,11 @@ import javax.persistence.*;
 public class TomatoCharacter {
 
     @Id
-    private Long char_id;
+    private Long userId;
 
-    @MapsId("userKey")  //char_id.userKey 매핑
+    @MapsId("userId")  //TomatoCharacter.userId 매핑
     @OneToOne
-    @JoinColumn(name = "user_key", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(nullable = false)

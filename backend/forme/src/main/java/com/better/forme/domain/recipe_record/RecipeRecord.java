@@ -11,18 +11,13 @@ import javax.persistence.*;
 @Entity
 public class RecipeRecord {
 
-//    @Id
-//    @EmbeddedId
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long recipe_index;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @OneToOne
-//    @JoinColumn(name = "user_key")
-//    private User user;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @Column(nullable = false)
     private String recipe_name;

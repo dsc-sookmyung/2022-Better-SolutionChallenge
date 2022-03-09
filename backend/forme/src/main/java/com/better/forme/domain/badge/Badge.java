@@ -12,18 +12,13 @@ import java.io.Serializable;
 @Entity
 public class Badge {
 
-//    @EmbeddedId
-//    private BadgeId badge_id;
-
-//    @Id
-//    //@MapsId("userKey")  //badge_id.userKey 매핑
-//    @OneToOne
-//    @JoinColumn(name = "user_key", nullable = false)
-//    private User user;
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userId;
+
+    @MapsId("userId")  //Badge.userId 매핑
+    @OneToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @Column(nullable = false)
     private Boolean badge1;

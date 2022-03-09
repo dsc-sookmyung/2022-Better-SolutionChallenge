@@ -21,16 +21,16 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userId;
 
-//    @OneToMany(mappedBy = "user")
-//    private List<Alarm> alarm;
-//
-//    @OneToOne(mappedBy = "user")
-//    private Badge badge;
-//
-//    @OneToOne(mappedBy = "user")
-//    private TomatoCharacter tomatoCharacter;
+    @OneToOne(mappedBy = "user")
+    private Alarm alarm;
+
+    @OneToOne(mappedBy = "user")
+    private Badge badge;
+
+    @OneToOne(mappedBy = "user")
+    private TomatoCharacter tomatoCharacter;
 
     @Column(length = 500, nullable = false , name="id_email")
     private String idEmail;
