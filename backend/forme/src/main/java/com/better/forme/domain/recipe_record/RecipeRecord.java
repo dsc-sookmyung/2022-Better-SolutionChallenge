@@ -1,6 +1,8 @@
 package com.better.forme.domain.recipe_record;
 
 import com.better.forme.domain.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +17,7 @@ public class RecipeRecord {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
@@ -42,4 +45,12 @@ public class RecipeRecord {
 
     @Column(nullable = false)
     private String desc5;
+
+    @Builder
+    public RecipeRecord(String recipe_name, Integer type, Integer cooking_time,String desc1){
+        this.recipe_name = recipe_name;
+        this.type=type;
+        this.cooking_time = cooking_time;
+        this.desc1=desc1;
+    }
 }
