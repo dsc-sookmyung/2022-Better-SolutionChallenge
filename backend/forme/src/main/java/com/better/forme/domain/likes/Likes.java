@@ -22,7 +22,7 @@ public class Likes {
 
      @ManyToOne
      @JoinColumn(name = "recipe_record_index", nullable = false)
-     private RecipeRecord recipe_index;
+     private RecipeRecord recipe_record_index;
 
     // temp var for LikeRepository Query
     // private Long recipe_index;

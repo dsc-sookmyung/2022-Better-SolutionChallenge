@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface LikesRepository extends JpaRepository<Likes, Long> {
 
-    @Query("SELECT COUNT(*) FROM Likes l WHERE l.recipe_index=:recipe_index and l.likes=1")
-    Long countRecipeLikes(@Param("recipe_index") Long recipe_index);
-   // List<Likes> countRecipeLikes(@Param("recipe_index") Long recipe_index);
+    @Query("SELECT COUNT(*) FROM Likes l WHERE l.id=:recipe_id and l.likes=1")
+    Long countRecipeLikes(@Param("recipe_id") Long recipe_id);
 }
