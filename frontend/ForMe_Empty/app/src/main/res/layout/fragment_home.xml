@@ -143,11 +143,6 @@
             </FrameLayout>
 -->
 
-            <ImageView
-                android:layout_width="346dp"
-                android:layout_height="200dp"
-                android:src="@drawable/round_background_border"/>
-
 
             <TextView
                 android:id="@+id/title_home3"
@@ -167,14 +162,6 @@
                 android:scrollbarFadeDuration="0"
                 app:layoutManager="LinearLayoutManager">
             </androidx.recyclerview.widget.RecyclerView>
-
-
-            <ImageView
-                android:layout_width="346dp"
-                android:layout_height="200dp"
-                android:src="@drawable/round_background_border"
-                android:layout_marginBottom="40dp"/>
-
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

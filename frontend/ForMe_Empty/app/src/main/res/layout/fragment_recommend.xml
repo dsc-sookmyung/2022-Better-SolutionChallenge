@@ -3,12 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecommendFragment">
+    tools:context=".RecommendFragment"
+    android:background="@color/background"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="보드페이지" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scrollbarFadeDuration="0"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
 
 </FrameLayout>

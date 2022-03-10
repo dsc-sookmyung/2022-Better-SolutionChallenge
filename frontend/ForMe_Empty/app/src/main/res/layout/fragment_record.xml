@@ -1,14 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecordFragment">
+    tools:context=".MainActivity">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+<!--
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="식단기록페이지" />
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:descendantFocusability="blocksDescendants"
+        >
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/title_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="casual"
+                    android:text="나의 식단 기록"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/highlight"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="15dp"
+                    android:layout_marginStart="20dp"
+
+                    android:layout_marginTop="12dp"
+                    android:background="#3360BA62"
+                    app:layout_constraintStart_toStartOf="@id/title_record"
+                    app:layout_constraintTop_toTopOf="@id/title_record" />
+
+<!--
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/round_background_border"
+                    app:layout_constraintBottom_toBottomOf="@id/record_button"
+                    app:layout_constraintEnd_toEndOf="@id/record_button"
+                    app:layout_constraintStart_toStartOf="@id/record_button"
+                    app:layout_constraintTop_toTopOf="@id/record_button" />
+
+                <Button
+                    android:id="@+id/record_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:color/transparent"
+                    android:text="+ 일기 쓰기"
+                    android:textColor="@color/green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+-->
+                <Button
+                    android:id="@+id/record_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/button_shape"
+                    android:text="+ 일기 쓰기"
+                    android:textColor="@color/green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+                <!--
+                    android:background="@android:color/transparent"
+-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:id="@+id/record_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarFadeDuration="0"
+                app:layoutManager="LinearLayoutManager">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+<!--
+    </androidx.core.widget.NestedScrollView>
+-->
 
 </FrameLayout>

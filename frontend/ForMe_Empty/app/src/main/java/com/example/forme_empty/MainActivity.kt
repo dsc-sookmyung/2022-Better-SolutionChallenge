@@ -1,6 +1,9 @@
 package com.example.forme_empty
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -10,47 +13,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*
-        *리사이클러뷰
-        */
-
-
+        //음식기록페이지로 이동하기 위한 인덴트 생성
 /*
-        val recordDataset = RecordDatasource().loadRecord()
-        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-
-        recyclerView.adapter = RecordItemAdapter(this, recordDataset)
-
-        val llm = LinearLayoutManager(this)
-        llm.orientation = LinearLayoutManager.HORIZONTAL
-*/
-/*
-        recordRecyclerView.layoutManager = llm
-        recordRecyclerView.adapter = RecordItemAdapter(this, recordDataset)
-*//*
-
-
-
-//        recordRecyclerView.adapter = RecordItemAdapter(this, recordDataset)
-
-        //성능을 개선하기 위해 다음을 설정
-        //레이아웃의 크기가 변경되지 않는 경우!에 설정
-        //recordRecyclerView.setHasFixedSize(true)
-
-        //가로로 리사이클러뷰를 만들기 위한 코드
-
-*/
-/*
-        recordRecyclerView.layoutManager =
-            LinearLayoutManager(this).also { it.orientation = LinearLayoutManager.HORIZONTAL }
-*//*
-
-
-
-        //중복스크롤에 따른 오류 방지
-        //recordRecyclerView.setNestedScrollingEnabled(false);
-
-
+        val registrationIntent = Intent(this, WriteRecord::class.java)
+        val RegisterPageButton: Button = findViewById(R.id.record_button)
+        RegisterPageButton.setOnClickListener {
+            startActivity(registrationIntent)
+        }
 */
 
         /*

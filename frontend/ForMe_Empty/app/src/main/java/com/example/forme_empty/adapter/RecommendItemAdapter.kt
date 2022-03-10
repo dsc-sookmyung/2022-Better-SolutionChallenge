@@ -13,8 +13,8 @@ import com.example.forme_empty.model.ForMe
 class RecommendItemAdapter (private val context: Context, private val dataset: List<ForMe>) : RecyclerView.Adapter<RecordItemAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView = view.findViewById(R.id.recommend_title)
-        val imageView: ImageView = view.findViewById(R.id.recommend_image)
+        val textView: TextView = view.findViewById(R.id.item_title)
+        val imageView: ImageView = view.findViewById(R.id.item_image)
         //val background: ImageView = view.findViewById(R.id.record_background)
     }
 
