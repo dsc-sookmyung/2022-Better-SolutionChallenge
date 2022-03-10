@@ -1,6 +1,7 @@
 package com.better.forme.domain.alarm;
 
 import com.better.forme.domain.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -16,6 +17,7 @@ public class Alarm implements Serializable {
     @Id
     private Long userId;
 
+    @JsonIgnore
     @MapsId("userId")  //Alarm.userId 매핑
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false)
