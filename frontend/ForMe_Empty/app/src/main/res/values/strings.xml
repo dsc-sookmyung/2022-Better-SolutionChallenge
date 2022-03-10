@@ -21,4 +21,12 @@
     <string name="recommend3">양념 두부 무 지짐</string>
     <string name="recommend4">생 브라우니</string>
     <string name="recommend5">베이크드 빈 토스트</string>
+
+    <!--식단기록 기록 내용 -->
+    <string name="record_text1">These ensure the integrity of the investigation by providing proof of data authenticity and preservation of the original evidence and </string>
+    <string name="record_text2">documentation, which can be used to achieve the same exact results if the usage of tools and methods are repeated.</string>
+    <string name="record_text3">These ensure the integrity of the investigation by providing proof of data authenticity and preservation of the original evidence and </string>
+    <string name="record_text4">documentation, which can be used to achieve the same exact results if the usage of tools and methods are repeated.</string>
+    <string name="record_text5">These ensure the integrity of the investigation by providing proof of data authenticity and preservation of the original evidence and </string>
+
 </resources>
