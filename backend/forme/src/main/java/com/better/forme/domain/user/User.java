@@ -5,6 +5,8 @@ import com.better.forme.domain.badge.Badge;
 import com.better.forme.domain.character.TomatoCharacter;
 import com.better.forme.domain.diet_record.DietRecord;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +31,7 @@ public class User {
     @OneToOne(mappedBy = "user")
     private Badge badge;
 
+    @JsonManagedReference
     @OneToOne(mappedBy = "user")
     private TomatoCharacter tomatoCharacter;
 
@@ -66,4 +69,29 @@ public class User {
     @Column(nullable = false)
     private String nickname;
 
+    @Builder
+    public User(Long userId, String idEmail, String email,
+                Boolean sex, Integer age, Integer currentType, Integer goalType,
+                Integer day1, Integer day2, Integer day3, Integer day4, Integer day5, Integer day6, Integer day7,
+                Time mealtime1, Time mealtime2, Time mealtime3, Boolean onAlarm, String nickname) {
+        this.userId = userId;
+        this.idEmail = idEmail;
+        this.email = email;
+        this.sex = sex;
+        this.age = age;
+        this.currentType = currentType;
+        this.goalType = goalType;
+        this.day1 = day1;
+        this.day2 = day2;
+        this.day3 = day3;
+        this.day4 = day4;
+        this.day5 = day5;
+        this.day6 = day6;
+        this.day7 = day7;
+        this.mealtime1 = mealtime1;
+        this.mealtime2 = mealtime2;
+        this.mealtime3 = mealtime3;
+        this.onAlarm = onAlarm;
+        this.nickname = nickname;
+    }
 }

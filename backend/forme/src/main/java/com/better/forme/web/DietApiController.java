@@ -6,12 +6,11 @@ import com.better.forme.domain.diet_record.DietRecordRepository;
 import com.better.forme.domain.user.User;
 import com.better.forme.domain.user.UserRepository;
 import com.better.forme.service.diet_record.DietService;
-import com.better.forme.web.dto.DietResponseDto;
-import com.better.forme.web.dto.DietSaveRequestDto;
+import com.better.forme.web.dto.DietDto.DietResponseDto;
+import com.better.forme.web.dto.DietDto.DietSaveRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,8 +27,6 @@ public class DietApiController {
     public Long save(@RequestBody DietSaveRequestDto requestDto) {
         return dietService.save(requestDto);
     }
-
-
 
     @GetMapping("/api/diet/{id}")
     public DietResponseDto findById(@PathVariable Long id){

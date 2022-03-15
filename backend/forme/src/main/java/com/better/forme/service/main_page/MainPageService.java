@@ -6,7 +6,6 @@ import com.better.forme.domain.character.TomatoCharacter;
 import com.better.forme.domain.character.TomatoCharacterRepository;
 import com.better.forme.domain.diet_record.DietRecord;
 import com.better.forme.domain.diet_record.DietRecordRepository;
-import com.better.forme.domain.likes.Likes;
 import com.better.forme.domain.likes.LikesRepository;
 import com.better.forme.domain.main_page.MainPage;
 import com.better.forme.domain.recipe_record.RecipeRecord;
@@ -14,14 +13,11 @@ import com.better.forme.domain.recipe_record.RecipeRecordRepository;
 import com.better.forme.domain.user.User;
 import com.better.forme.domain.user.UserRepository;
 import com.better.forme.web.dto.MainPageResponseDto;
-import com.better.forme.web.dto.UserResponseDto;
-import io.swagger.models.auth.In;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
-import java.util.List;
 
 @RequiredArgsConstructor
 @Service
