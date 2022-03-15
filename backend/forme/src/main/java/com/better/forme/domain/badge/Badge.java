@@ -1,6 +1,7 @@
 package com.better.forme.domain.badge;
 
 import com.better.forme.domain.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +16,7 @@ public class Badge {
     @Id
     private Long userId;
 
+    @JsonIgnore
     @MapsId("userId")  //Badge.userId 매핑
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false)

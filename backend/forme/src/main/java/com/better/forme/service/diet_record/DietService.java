@@ -2,8 +2,9 @@ package com.better.forme.service.diet_record;
 
 import com.better.forme.domain.diet_record.DietRecord;
 import com.better.forme.domain.diet_record.DietRecordRepository;
-import com.better.forme.web.dto.DietResponseDto;
-import com.better.forme.web.dto.DietSaveRequestDto;
+import com.better.forme.domain.user.User;
+import com.better.forme.web.dto.DietDto.DietResponseDto;
+import com.better.forme.web.dto.DietDto.DietSaveRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -2,6 +2,7 @@ package com.better.forme.domain.likes;
 
 import com.better.forme.domain.recipe_record.RecipeRecord;
 import com.better.forme.domain.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -16,6 +17,7 @@ public class Likes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long likes_index;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;

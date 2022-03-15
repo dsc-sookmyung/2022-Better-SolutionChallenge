@@ -1,6 +1,7 @@
 package com.better.forme.domain.character;
 
 import com.better.forme.domain.user.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +16,7 @@ public class TomatoCharacter {
     private Long userId;
 
     @MapsId("userId")  //TomatoCharacter.userId 매핑
+    @JsonBackReference
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;

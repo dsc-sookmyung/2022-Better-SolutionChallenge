@@ -1,7 +1,6 @@
 package com.better.forme.web;
 
 import com.better.forme.service.main_page.MainPageService;
-import com.better.forme.web.dto.DietResponseDto;
 import com.better.forme.web.dto.MainPageResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
