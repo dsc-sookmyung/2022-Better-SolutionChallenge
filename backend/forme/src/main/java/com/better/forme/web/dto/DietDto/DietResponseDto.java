@@ -12,11 +12,11 @@ import java.util.Optional;
 @Getter
 @NoArgsConstructor
 public class DietResponseDto {
-    private Long id;
 
-    private User user;
+    private Long id;
     private Date date;
     private Integer meal_category;
+    private String food_img;
     private String food_name;
     private String food_desc;
 
@@ -31,8 +31,10 @@ public class DietResponseDto {
         this.id = entity.getId();
         this.date =entity.getDate();
         this.meal_category=entity.getMeal_category();
+        this.food_img = entity.getFood_img();
         this.food_name=entity.getFood_name();
         this.food_desc=entity.getFood_desc();
+
         this.egg_check=entity.getEgg_check();
         this.dairy_check=entity.getDairy_check();
         this.fish_check=entity.getFish_check();

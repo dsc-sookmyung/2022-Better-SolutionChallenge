@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
@@ -50,25 +51,21 @@ public class MainPageService {
         Integer main_badge1 = badge_entity.getMain_badge1();
 
         // diet_record 테이블 정보 가져옴
-        DietRecord dietRecord_entity = dietRecordRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("no user's diet record"));
-        Date date = dietRecord_entity.getDate();
-        String food_name = dietRecord_entity.getFood_name();
-        String food_desc = dietRecord_entity.getFood_desc();
+        List<DietRecord> dietRecord_entity = dietRecordRepository.findDietRecordUser(id);
+        if(dietRecord_entity.isEmpty())
+            throw new IllegalArgumentException("no user's diet record");
 
         // recipe_record 테이블 정보 가져옴
-        RecipeRecord recipeRecord_entity = recipeRecordRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("no user's recipe record"));
-        String recipe_name = recipeRecord_entity.getRecipe_name();
-        Integer type = recipeRecord_entity.getType();
-        Integer cooking_time = recipeRecord_entity.getCooking_time();
+        List<RecipeRecord> recipeRecord_entity = recipeRecordRepository.findRecipeRecordUser(id);
+        if (recipeRecord_entity.isEmpty())
+            throw new IllegalArgumentException("no user's recipe record");
 
         // like 테이블 정보 가져옴
         //List<Likes> likes_entity = likesRepository.countRecipeLikes(1);
-        Long likes = likesRepository.countRecipeLikes(Long.valueOf(1));
+        Long likes = likesRepository.countRecipeLikes(Long.valueOf(id));
 
         MainPage mainPage = new MainPage(id, day1, goalType, level, exp, main_badge1,
-                date, food_name, food_desc, recipe_name, type, cooking_time, likes);
+                dietRecord_entity, recipeRecord_entity, likes);
 
         return new MainPageResponseDto(mainPage);
     }

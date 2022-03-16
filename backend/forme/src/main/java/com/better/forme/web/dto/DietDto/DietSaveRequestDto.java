@@ -14,9 +14,9 @@ import java.util.Date;
 public class DietSaveRequestDto {
 
     private User user;
-
     private Date date;
     private Integer meal_category;
+    private String food_img;
     private String food_name;
     private String food_desc;
 
@@ -28,11 +28,12 @@ public class DietSaveRequestDto {
     private Boolean beef_check;
 
     @Builder
-    public DietSaveRequestDto(User user, Date date, Integer meal_category, String food_name, String food_desc,
+    public DietSaveRequestDto(User user, Date date, Integer meal_category, String food_img, String food_name, String food_desc,
                               Boolean egg_check, Boolean dairy_check, Boolean fish_check, Boolean birds_check, Boolean pork_check, Boolean beef_check){
         this.user = user;
         this.date = date;
         this.meal_category= meal_category;
+        this.food_img = food_img;
         this.food_name= food_name;
         this.food_desc=food_desc;
         this.egg_check=egg_check;
