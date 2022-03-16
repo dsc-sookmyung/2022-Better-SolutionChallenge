@@ -18,7 +18,6 @@ public class DietRecord {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
@@ -56,7 +55,6 @@ public class DietRecord {
     @Builder
     public DietRecord(User user, Date date, Integer meal_category, String food_name, String food_desc,
                       Boolean egg_check, Boolean dairy_check, Boolean fish_check, Boolean birds_check, Boolean pork_check, Boolean beef_check) {
-//        this.user.getUserId().add(this);
         this.user = user;
         this.date =date;
         this.meal_category=meal_category;

@@ -17,17 +17,13 @@ public class Likes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long likes_index;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-     @ManyToOne
-     @JoinColumn(name = "recipe_record_index", nullable = false)
-     private RecipeRecord recipe_record_index;
-
-    // temp var for LikeRepository Query
-    // private Long recipe_index;
+    @ManyToOne
+    @JoinColumn(name = "recipe_record_index", nullable = false)
+    private RecipeRecord recipe_record_index;
 
     @Column(nullable = false)
     private Boolean likes;

@@ -1,18 +1,24 @@
 package com.better.forme.web;
 
 import com.better.forme.service.alarm.AlarmService;
-import com.better.forme.web.dto.AlarmResponseDto;
+import com.better.forme.web.dto.AlarmDto.AlarmResponseDto;
+import com.better.forme.web.dto.AlarmDto.AlarmSaveRequestDto;
+import com.better.forme.web.dto.RecipeDto.RecipeSaveRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
 public class AlarmApiController {
+
     private final AlarmService alarmService;
 
-    @GetMapping("/api/alarm/{id}")
+    @PostMapping("/api/setting/alarm")
+    public Long save(@RequestBody AlarmSaveRequestDto requestDto) {
+        return alarmService.save(requestDto);
+    }
+
+    @GetMapping("/api/setting/alarm/{id}")
     public AlarmResponseDto findById(@PathVariable Long id){
         return alarmService.findById(id);
     }

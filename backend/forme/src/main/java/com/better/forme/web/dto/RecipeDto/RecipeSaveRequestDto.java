@@ -1,52 +1,29 @@
-package com.better.forme.domain.recipe_record;
+package com.better.forme.web.dto.RecipeDto;
 
+import com.better.forme.domain.recipe_record.RecipeRecord;
 import com.better.forme.domain.user.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Column;
 
 @Getter
 @NoArgsConstructor
-@Entity
-public class RecipeRecord {
+public class RecipeSaveRequestDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
     private User user;
-
-    @Column(nullable = false)
     private String recipe_name;
-
-    @Column(nullable = false)
     private Integer type;
-
-    @Column(nullable = false)
     private Integer cooking_time;
-
-    @Column(nullable = false)
     private String desc1;
-
-    @Column(nullable = false)
     private String desc2;
-
-    @Column(nullable = false)
     private String desc3;
-
-    @Column(nullable = false)
     private String desc4;
-
-    @Column(nullable = false)
     private String desc5;
 
     @Builder
-    public RecipeRecord(User user, String recipe_name, Integer type, Integer cooking_time,
+    public RecipeSaveRequestDto(User user, String recipe_name, Integer type, Integer cooking_time,
                         String desc1, String desc2, String desc3, String desc4, String desc5){
         this.user = user;
         this.recipe_name = recipe_name;
@@ -57,5 +34,19 @@ public class RecipeRecord {
         this.desc3 = desc3;
         this.desc4 = desc4;
         this.desc5 = desc5;
+    }
+
+    public RecipeRecord toEntity(){
+        return RecipeRecord.builder()
+                .user(user)
+                .recipe_name(recipe_name)
+                .type(type)
+                .cooking_time(cooking_time)
+                .desc1(desc1)
+                .desc2(desc2)
+                .desc3(desc3)
+                .desc4(desc4)
+                .desc5(desc5)
+                .build();
     }
 }
