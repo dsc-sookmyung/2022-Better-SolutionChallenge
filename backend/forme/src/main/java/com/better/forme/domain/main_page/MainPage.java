@@ -1,10 +1,13 @@
 package com.better.forme.domain.main_page;
 
+import com.better.forme.domain.diet_record.DietRecord;
+import com.better.forme.domain.recipe_record.RecipeRecord;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -26,17 +29,10 @@ public class MainPage {
     //, main_badge2, main_badge3;
 
     // diet_record
-    private Date date;
-    private String food_name;
-    private String food_desc;
-    // private *** 사진
-    // private Integer meal_category;
+    private List<DietRecord> dietRecords;
 
     // recipe_record
-    // private *** 완성사진
-    private String recipe_name;
-    private Integer type;
-    private Integer cooking_time;
+    private List<RecipeRecord> recipeRecords;
 
     // likes
     private Long likes;
@@ -45,8 +41,7 @@ public class MainPage {
     public MainPage(Long id, Integer day1, Integer goalType,
                     Integer level, Integer exp,
                     Integer main_badge1,
-                    Date date, String food_name, String food_desc,
-                    String recipe_name, Integer type, Integer cooking_time, Long likes) {
+                    List<DietRecord> dietRecords, List<RecipeRecord> recipeRecords, Long likes) {
 
         this.id = id;
         this.day1 = day1;
@@ -54,12 +49,8 @@ public class MainPage {
         this.level = level;
         this.exp = exp;
         this.main_badge1 = main_badge1;
-        this.date = date;
-        this.food_name = food_name;
-        this.food_desc = food_desc;
-        this.recipe_name = recipe_name;
-        this.type = type;
-        this.cooking_time = cooking_time;
+        this.dietRecords = dietRecords;
+        this.recipeRecords = recipeRecords;
         this.likes = likes;
     }
 }

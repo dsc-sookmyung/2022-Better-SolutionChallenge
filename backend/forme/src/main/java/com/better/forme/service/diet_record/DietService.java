@@ -7,8 +7,11 @@ import com.better.forme.web.dto.DietDto.DietResponseDto;
 import com.better.forme.web.dto.DietDto.DietSaveRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.transaction.Transactional;
+import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service

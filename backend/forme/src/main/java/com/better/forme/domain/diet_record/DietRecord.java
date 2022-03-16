@@ -18,7 +18,8 @@ public class DietRecord {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
@@ -27,6 +28,9 @@ public class DietRecord {
 
     @Column(nullable = false)
     private Integer meal_category;
+
+    @Column(nullable = false, length = 500)
+    private String food_img;
 
     @Column(nullable = false)
     private String food_name;
@@ -53,10 +57,11 @@ public class DietRecord {
     private Boolean beef_check;
 
     @Builder
-    public DietRecord(User user, Date date, Integer meal_category, String food_name, String food_desc,
+    public DietRecord(User user, Date date, String food_img, Integer meal_category, String food_name, String food_desc,
                       Boolean egg_check, Boolean dairy_check, Boolean fish_check, Boolean birds_check, Boolean pork_check, Boolean beef_check) {
         this.user = user;
         this.date =date;
+        this.food_img = food_img;
         this.meal_category=meal_category;
         this.food_name=food_name;
         this.food_desc=food_desc;
