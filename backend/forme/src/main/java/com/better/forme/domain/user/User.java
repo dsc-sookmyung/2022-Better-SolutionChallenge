@@ -25,9 +25,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
+    @JsonManagedReference
     @OneToOne(mappedBy = "user")
     private Alarm alarm;
 
+    @JsonManagedReference
     @OneToOne(mappedBy = "user")
     private Badge badge;
 
