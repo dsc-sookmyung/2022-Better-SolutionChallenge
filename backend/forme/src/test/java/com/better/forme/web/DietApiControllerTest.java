@@ -43,8 +43,7 @@ public class DietApiControllerTest {
 
     @After
     public void tearDown() throws Exception {
-        dietRecordRepository.deleteAll();
-        userRepository.deleteAll();
+//        dietRecordRepository.deleteAll();
     }
 
     @Test

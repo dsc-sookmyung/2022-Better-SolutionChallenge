@@ -42,7 +42,7 @@ public class RecipeApiControllerTest {
     
     @After
     public void tearDown() throws Exception {
-        recipeRecordRepository.deleteAll();
+//        recipeRecordRepository.deleteAll();
     }
     
     @Test

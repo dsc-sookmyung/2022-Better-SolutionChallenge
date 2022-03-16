@@ -38,7 +38,7 @@ public class AlarmApiControllerTest {
     
     @After
     public void tearDown() throws Exception {
-        alarmRepository.deleteAll();
+//        alarmRepository.deleteAll();
     }
     
     @Test

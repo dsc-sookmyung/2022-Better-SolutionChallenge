@@ -34,7 +34,7 @@ public class UserApiControllerTest {
 
     @After
     public void tearDown() throws Exception {
-        userRepository.deleteAll();
+//        userRepository.deleteAll();
     }
 
     @Test
