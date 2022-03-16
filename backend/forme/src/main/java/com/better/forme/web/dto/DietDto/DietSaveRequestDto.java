@@ -49,6 +49,7 @@ public class DietSaveRequestDto {
                 .user(user)
                 .date(date)
                 .meal_category(meal_category)
+                .food_img(food_img)
                 .food_name(food_name)
                 .food_desc(food_desc)
                 .egg_check(egg_check)

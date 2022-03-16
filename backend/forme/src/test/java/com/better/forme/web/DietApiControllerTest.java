@@ -55,6 +55,7 @@ public class DietApiControllerTest {
         Date date = new Date();
 
         Integer meal_category = 1;
+        String food_img = "img_sandwich";
         String food_name = "sandwich";
         String food_desc = "with ham and cheese";
 
@@ -68,6 +69,7 @@ public class DietApiControllerTest {
         DietSaveRequestDto requestDto = DietSaveRequestDto.builder()
                 .user(user)
                 .date(date)
+                .food_img(food_img)
                 .meal_category(meal_category)
                 .food_name(food_name)
                 .food_desc(food_desc)
@@ -89,9 +91,9 @@ public class DietApiControllerTest {
         assertThat(responseEntity.getBody()).isGreaterThan(0L);
 
         List<DietRecord> all = dietRecordRepository.findAll();
-        assertThat(all.get(0).getUser().getUserId()).isEqualTo(user_id);
-        assertThat(all.get(0).getMeal_category()).isEqualTo(meal_category);
-        assertThat(all.get(0).getPork_check()).isEqualTo(pork_check);
+        assertThat(all.get(2).getUser().getUserId()).isEqualTo(user_id);
+        assertThat(all.get(2).getMeal_category()).isEqualTo(meal_category);
+        assertThat(all.get(2).getPork_check()).isEqualTo(pork_check);
     }
 
     // desc 2까지만 넣고 3부턴 안 넣었을 때도 되는지 테스트해보기

@@ -52,10 +52,10 @@ public class AlarmApiControllerTest {
         Boolean like_alarm = Boolean.FALSE;
         Boolean recommend_alarm = Boolean.TRUE;
         Boolean cheerup_alarm = Boolean.FALSE;
-        Integer mealtime_alarm = 1;
+        Integer mealtime_alarm = 2;
 
         AlarmSaveRequestDto requestDto = AlarmSaveRequestDto.builder()
-                .user(user)
+                .user_id(user_id)
                 .day_alarm(day_alarm)
                 .like_alarm(like_alarm)
                 .recommend_alarm(recommend_alarm)
@@ -66,7 +66,6 @@ public class AlarmApiControllerTest {
         String url = "http://localhost:" + port + "/api/setting/alarm";
 
         // when
-        // error occur
         ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, requestDto, Long.class);
 
         // then

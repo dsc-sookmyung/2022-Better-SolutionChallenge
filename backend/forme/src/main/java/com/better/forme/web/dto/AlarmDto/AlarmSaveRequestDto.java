@@ -12,7 +12,7 @@ import javax.persistence.Column;
 @NoArgsConstructor
 public class AlarmSaveRequestDto {
 
-    private User user;
+    private Long user_id;
     private Boolean day_alarm;
     private Boolean like_alarm;
     private Boolean recommend_alarm;
@@ -20,9 +20,9 @@ public class AlarmSaveRequestDto {
     private Integer mealtime_alarm;
 
     @Builder
-    public AlarmSaveRequestDto(User user, Boolean day_alarm, Boolean like_alarm,
+    public AlarmSaveRequestDto(Long user_id, Boolean day_alarm, Boolean like_alarm,
                                Boolean recommend_alarm, Boolean cheerup_alarm, Integer mealtime_alarm) {
-        this.user = user;
+        this.user_id = user_id;
         this.day_alarm = day_alarm;
         this.like_alarm = like_alarm;
         this.recommend_alarm = recommend_alarm;
@@ -32,7 +32,7 @@ public class AlarmSaveRequestDto {
 
     public Alarm toEntity() {
         return Alarm.builder()
-                .user(user)
+                .user_id(user_id)
                 .day_alarm(day_alarm)
                 .like_alarm(like_alarm)
                 .recommend_alarm(recommend_alarm)

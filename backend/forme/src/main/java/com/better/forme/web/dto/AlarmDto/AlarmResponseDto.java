@@ -11,8 +11,8 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 public class AlarmResponseDto {
-    private Long userId;
 
+    private Long userId;
     private Boolean day_alarm;
     private Boolean like_alarm;
     private Boolean recommend_alarm;

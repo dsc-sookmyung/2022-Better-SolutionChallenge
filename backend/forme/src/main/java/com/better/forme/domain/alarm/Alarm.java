@@ -41,8 +41,8 @@ public class Alarm implements Serializable {
     private Integer mealtime_alarm;
 
     @Builder
-    public Alarm(User user, Boolean day_alarm, Boolean like_alarm, Boolean recommend_alarm, Boolean cheerup_alarm, Integer mealtime_alarm) {
-        this.user = user;
+    public Alarm(Long user_id, Boolean day_alarm, Boolean like_alarm, Boolean recommend_alarm, Boolean cheerup_alarm, Integer mealtime_alarm) {
+        this.userId = user_id;
         this.day_alarm = day_alarm;
         this.like_alarm = like_alarm;
         this.recommend_alarm = recommend_alarm;
