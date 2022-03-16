@@ -102,6 +102,7 @@ public class DietApiControllerTest {
         
         //given
         User user = userRepository.findById(Long.valueOf(1)).get();
+        Long user_id = user.getUserId();
         Date date = new Date();
 
         Integer meal_category = 1;
@@ -139,7 +140,7 @@ public class DietApiControllerTest {
         assertThat(responseEntity.getBody()).isGreaterThan(0L);
 
         List<DietRecord> all = dietRecordRepository.findAll();
-        assertThat(all.get(0).getUser()).isEqualTo(user);
+        assertThat(all.get(0).getUser().getUserId()).isEqualTo(user_id);
         assertThat(all.get(0).getMeal_category()).isEqualTo(meal_category);
         assertThat(all.get(0).getPork_check()).isEqualTo(pork_check);
     }
