@@ -61,6 +61,8 @@ public class RecipeApiControllerTest {
         String desc4 = "Stir-fry spinach in oil.";
         String desc5 = "Mix it with noodles.";
 
+        String pic1 = "pic1";
+
         RecipeSaveRequestDto requestDto = RecipeSaveRequestDto.builder()
                 .user(user)
                 .recipe_name(recipe_name)
@@ -71,6 +73,7 @@ public class RecipeApiControllerTest {
                 .desc3(desc3)
                 .desc4(desc4)
                 .desc5(desc5)
+                .pic1(pic1)
                 .build();
 
         String url = "http://localhost:" + port + "/api/recipe-record";
@@ -85,5 +88,6 @@ public class RecipeApiControllerTest {
         List<RecipeRecord> all = recipeRecordRepository.findAll();
         assertThat(all.get(1).getRecipe_name()).isEqualTo(recipe_name);
         assertThat(all.get(1).getDesc2()).isEqualTo(desc2);
+        assertThat(all.get(1).getPic1()).isEqualTo(pic1);
     }
 }

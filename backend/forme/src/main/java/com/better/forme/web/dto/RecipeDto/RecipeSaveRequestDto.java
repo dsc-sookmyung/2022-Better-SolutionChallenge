@@ -22,9 +22,16 @@ public class RecipeSaveRequestDto {
     private String desc4;
     private String desc5;
 
+    private String pic1;
+    private String pic2;
+    private String pic3;
+    private String pic4;
+    private String pic5;
+
     @Builder
     public RecipeSaveRequestDto(User user, String recipe_name, Integer type, Integer cooking_time,
-                        String desc1, String desc2, String desc3, String desc4, String desc5){
+                                String desc1, String desc2, String desc3, String desc4, String desc5,
+                                String pic1, String pic2, String pic3, String pic4, String pic5) {
         this.user = user;
         this.recipe_name = recipe_name;
         this.type = type;
@@ -34,6 +41,11 @@ public class RecipeSaveRequestDto {
         this.desc3 = desc3;
         this.desc4 = desc4;
         this.desc5 = desc5;
+        this.pic1 = pic1;
+        this.pic2 = pic2;
+        this.pic3 = pic3;
+        this.pic4 = pic4;
+        this.pic5 = pic5;
     }
 
     public RecipeRecord toEntity(){
@@ -47,6 +59,11 @@ public class RecipeSaveRequestDto {
                 .desc3(desc3)
                 .desc4(desc4)
                 .desc5(desc5)
+                .pic1(pic1)
+                .pic2(pic2)
+                .pic3(pic3)
+                .pic4(pic4)
+                .pic5(pic5)
                 .build();
     }
 }
