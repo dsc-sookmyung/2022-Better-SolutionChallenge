@@ -2,6 +2,7 @@
 
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.forme_empty.adapter.RecordItemAdapter
 import com.example.forme_empty.data.RecommendDatasource
 import com.example.forme_empty.data.RecordDatasource
+import com.example.forme_empty.databinding.FragmentHomeBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import kotlin.math.expm1
 
  // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,6 +30,12 @@ private const val ARG_PARAM2 = "param2"
  */
 class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
+    //레트로핏
+    val api = APIS.create()
+    val binding by lazy { com.example.forme_empty.databinding.FragmentHomeBinding.inflate(layoutInflater) }
+
+    var retrofitText : String? = null
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -43,14 +55,85 @@ class HomeFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+        binding.retrofit.setOnClickListener {
+            api.get_users().enqueue(object : Callback<HTTP_GET_Model> {
+                override fun onResponse(
+                    call: Call<HTTP_GET_Model>,
+                    response: Response<HTTP_GET_Model>
+                ) {
+                    Log.d("log", response.toString())
+                    Log.d("log", response.body().toString())
+                    if (!response.body().toString().isEmpty()) {
+                        binding.text.setText(response.body().toString())
+
+                        //다른 텍스트 바꿔보기
+/*
+                    retrofitText = response.body().toString()
+                    binding.textHome1.setText("매주 "+retrofitText[])
+                    }
+*/
+
+                        //DataModel의 변수 그대로 이용하기
+                        //text_home1 - day1
+                        var dayOfWeek : String
+                        dayOfWeek = when (response.body()?.day1) {
+                            0 -> "월요일"
+                            1 -> "화요일"
+                            2 -> "수요일"
+                            3 -> "목요일"
+                            4 -> "금요일"
+                            5 -> "토요일"
+                            6 -> "일요일"
+                            else -> ""
+                        }
+                        binding.textHome1.setText("매주 "+ dayOfWeek + "은 채식 요일입니다.")
+                    }
+
+                }
+
+                override fun onFailure(call: Call<HTTP_GET_Model>, t: Throwable) {
+                    Log.d("log", t.message.toString())
+                    Log.d("log", "fail")
+                }
+            })
+        }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
+
+/*
+        binding.retrofit.setOnClickListener {
+            api.get_users().enqueue(object : Callback<HTTP_GET_Model> {
+                override fun onResponse(
+                    call: Call<HTTP_GET_Model>,
+                    response: Response<HTTP_GET_Model>
+                ) {
+                    Log.d("log", response.toString())
+                    Log.d("log", response.body().toString())
+                    if (!response.body().toString().isEmpty())
+                        binding.text.setText(response.body().toString())
+                    else
+                        binding.text.setText("연결은 성공")
+                }
+
+                override fun onFailure(call: Call<HTTP_GET_Model>, t: Throwable) {
+                    Log.d("log", t.message.toString())
+                    Log.d("log", "fail")
+                }
+            })
+        }
+*/
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        //return inflater.inflate(R.layout.fragment_home, container, false)
+        return binding.root
     }
 
     //onViewCreated구현
