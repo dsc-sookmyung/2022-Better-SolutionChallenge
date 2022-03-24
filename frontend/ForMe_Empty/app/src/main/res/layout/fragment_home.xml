@@ -21,6 +21,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="레트로핏 테스트"
+                android:id="@+id/retrofit"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="레트로핏 테스트"
+                android:id="@+id/text"
+                />
             <TextView
                 android:id="@+id/title_home1"
                 android:layout_width="match_parent"
