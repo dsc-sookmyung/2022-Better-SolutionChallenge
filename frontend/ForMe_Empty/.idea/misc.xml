@@ -5,15 +5,17 @@
       <map>
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/drawable/button_shape.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/drawable/green_highlight.xml" value="0.1" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/drawable/ic_image_20__1_.xml" value="0.113" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/drawable/light_green_highlight.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/drawable/light_green_round_rectangle.xml" value="0.122" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/drawable/my_page.xml" value="0.1865" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/drawable/round_background_border.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_fragment_page1.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_fragment_page2.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_fragment_page3.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_push.xml" value="0.1" />
-        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_write_record.xml" value="0.23076923076923078" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_write_record.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/fragment_board.xml" value="0.2" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/fragment_my.xml" value="0.176" />

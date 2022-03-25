@@ -21,23 +21,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+<!--
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="레트로핏 테스트"
                 android:id="@+id/retrofit"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="알림 테스트"
-                android:id="@+id/alarm"/>
+-->
 
+<!--
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="레트로핏 테스트"
                 android:id="@+id/text"
                 />
+-->
+
             <TextView
                 android:id="@+id/title_home1"
                 android:layout_width="match_parent"
@@ -56,9 +56,21 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="casual"
-                android:text="· 매주 목요일은 채식 요일입니다 \n· 목표는 오보 베지테리언이군요!"
+                android:text="· 매주 목요일은 채식 요일입니다"
                 android:textSize="21sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_home2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="casual"
+                android:text="· 목표는 오보 베지테리언이군요!"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -94,6 +106,7 @@
                     tools:src="@drawable/toma"
                     tools:srcCompat="@drawable/toma" />
 
+<!--
                 <View
                     android:id="@+id/speech"
                     android:layout_width="366dp"
@@ -107,6 +120,55 @@
                     app:layout_constraintStart_toStartOf="@+id/lightGreenBox"
                     app:layout_constraintTop_toTopOf="@+id/lightGreenBox"
                     app:layout_constraintVertical_bias="0.0" />
+-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/level"
+                    android:text="Lv."
+                    app:layout_constraintStart_toStartOf="@id/imageView4"
+                    app:layout_constraintTop_toBottomOf="@id/imageView4"
+                    android:fontFamily="casual"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/now_level"
+                    android:text="1"
+                    app:layout_constraintStart_toEndOf="@id/level"
+                    app:layout_constraintTop_toTopOf="@id/level"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="casual"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/exp_text"
+                    android:text=" / 500"
+                    app:layout_constraintEnd_toEndOf="@id/imageView4"
+                    app:layout_constraintTop_toTopOf="@id/now_level"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="casual"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/now_exp"
+                    android:text="1"
+                    app:layout_constraintEnd_toStartOf="@id/exp_text"
+                    app:layout_constraintTop_toTopOf="@id/level"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="casual"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 

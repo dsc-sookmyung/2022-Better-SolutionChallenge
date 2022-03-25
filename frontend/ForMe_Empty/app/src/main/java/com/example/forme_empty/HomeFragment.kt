@@ -39,16 +39,6 @@ private const val ARG_PARAM2 = "param2"
  */
 class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    //AlarmActivity로 이동하기 위한 선언
-    // 1. Context를 받아올 변수 선언
-    lateinit var mainActivity: MainActivity
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-
-        // 2. Context를 Activity로 형변환하여 할당
-        mainActivity = context as MainActivity
-
-    }
 
 
 
@@ -110,7 +100,7 @@ class HomeFragment : Fragment() {
  */
 
 
-        binding.retrofit.setOnClickListener {
+        //binding.retrofit.setOnClickListener {
             api.get_users().enqueue(object : Callback<HTTP_GET_Model> {
                 override fun onResponse(
                     call: Call<HTTP_GET_Model>,
@@ -119,7 +109,7 @@ class HomeFragment : Fragment() {
                     Log.d("log", response.toString())
                     Log.d("log", response.body().toString())
                     if (!response.body().toString().isEmpty()) {
-                        binding.text.setText(response.body().toString())
+                        //binding.text.setText(response.body().toString())
 
                         //다른 텍스트 바꿔보기
 /*
@@ -141,7 +131,32 @@ class HomeFragment : Fragment() {
                             6 -> "일요일"
                             else -> ""
                         }
-                        binding.textHome1.setText("매주 "+ dayOfWeek + "은 채식 요일입니다.")
+                        binding.textHome1.setText("· 매주 "+ dayOfWeek + "은 채식 요일입니다.")
+
+
+                        var goal : String
+                        goal = when (response.body()?.goalType) {
+                            0 -> "고기 양 줄이기"
+                            1 -> "플렉시테리언"
+                            2 -> "플로 베지테리언"
+                            3 -> "페스코 베지테리언"
+                            4 -> "락토 오보 베지테리언"
+                            5 -> "오보 베지테리언"
+                            6 -> "락토 베지테리언"
+                            7 -> "비건"
+                            else -> ""
+                        }
+                        binding.textHome2.setText("· 목표는 " + goal + "이군요!")
+
+
+                        var level : Int
+                        level = response.body()?.level!!
+                        binding.nowLevel.setText(level.toString())
+
+                        var exp : Int
+                        exp = response.body()?.exp!!
+                        binding.nowExp.setText(exp.toString())
+
                     }
 
                 }
@@ -153,7 +168,7 @@ class HomeFragment : Fragment() {
             })
         }
 
-    }
+    //}
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -269,16 +284,8 @@ class HomeFragment : Fragment() {
         }
     }
 
-    //Button참조해서 리스너 달기
-    override fun onStart() {
-        super.onStart()
-
-        val alarmButton = mainActivity.findViewById<Button>(R.id.alarm)
-        val intent = Intent(getActivity(), PushActivity::class.java)
-        alarmButton.setOnClickListener {
-            startActivity(intent)
-        }
-
-    }
-
 }
+
+
+
+

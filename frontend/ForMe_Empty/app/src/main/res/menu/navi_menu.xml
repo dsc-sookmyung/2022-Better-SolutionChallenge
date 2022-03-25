@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/first" app:showAsAction="ifRoom" android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground" android:title="홈페이지" />
+        android:icon="@drawable/home_apps" android:title="홈페이지" />
     <item android:id="@+id/second" app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_launcher_foreground" android:title="추천레시피" />
+        android:icon="@drawable/recommend" android:title="추천레시피" />
     <item android:id="@+id/third" app:showAsAction="ifRoom"
-         android:icon="@drawable/ic_launcher_foreground" android:title="식단기록하기" />
+         android:icon="@drawable/cbbe37fff9cc8ed5011b9657e977801b" android:title="식단기록하기" />
     <item android:id="@+id/fourth" app:showAsAction="ifRoom" android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground" android:title="마이페이지" />
+        android:icon="@drawable/icon" android:title="마이페이지" />
 </menu>

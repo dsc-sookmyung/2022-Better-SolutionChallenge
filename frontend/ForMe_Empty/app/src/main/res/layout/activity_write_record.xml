@@ -60,7 +60,7 @@
             android:layout_height="300dp"
             android:importantForAccessibility="no"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/recommend1"
+            app:srcCompat="@drawable/_910403d5e3112561b"
             tools2:srcCompat="@drawable/recommend1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -79,6 +79,7 @@
             app:layout_constraintStart_toStartOf="parent"
             />
 
+<!-- 드롭다운
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,8 +99,21 @@
                 android:inputType="none"
                 android:text="식사 시간"
                 />
+-->
+<!--
+            <Spinner
+                android:id="@+id/eatTimeDropDownContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/today"
+                app:layout_constraintStart_toStartOf="@id/today"
+                android:autofillHints="식사 시간"
+                />
+-->
 
+<!--
         </com.google.android.material.textfield.TextInputLayout>
+-->
 
 
 
@@ -113,7 +127,7 @@
             android:backgroundTint="@color/green"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/eatTimeDropDownContainer"/>
+            app:layout_constraintTop_toBottomOf="@id/today"/>
 
         <EditText
             android:layout_marginLeft="20dp"

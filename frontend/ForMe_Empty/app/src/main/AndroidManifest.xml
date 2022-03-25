@@ -4,6 +4,10 @@
     package="com.example.forme_empty">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!--갤러리 이미지 추가 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
