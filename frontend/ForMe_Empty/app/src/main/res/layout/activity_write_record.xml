@@ -60,7 +60,7 @@
             android:layout_height="300dp"
             android:importantForAccessibility="no"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/recommend1"
+            app:srcCompat="@drawable/_910403d5e3112561b"
             tools2:srcCompat="@drawable/recommend1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
