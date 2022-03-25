@@ -9,11 +9,11 @@
     <string name="email_icon">email icon</string>
 
     <!-- 나의 식단 기록 -->
-    <string name="record1">시금치파스타</string>
-    <string name="record2">감자 샐러드</string>
-    <string name="record3">월남쌈</string>
-    <string name="record4">호박죽</string>
-    <string name="record5">과일 요거트</string>
+    <string name="record1">[예시]\n시금치파스타</string>
+    <string name="record2">[예시]\n감자 샐러드</string>
+    <string name="record3">[예시]\n월남쌈</string>
+    <string name="record4">[예시]\n호박죽</string>
+    <string name="record5">[예시]\n과일 요거트</string>
 
     <!-- 오늘 뭐 먹지? -->
     <string name="recommend1">두부 스테이크</string>
@@ -23,10 +23,10 @@
     <string name="recommend5">베이크드 빈 토스트</string>
 
     <!--식단기록 기록 내용 -->
-    <string name="record_text1">These ensure the integrity of the investigation by providing proof of data authenticity and preservation of the original evidence and </string>
-    <string name="record_text2">documentation, which can be used to achieve the same exact results if the usage of tools and methods are repeated.</string>
-    <string name="record_text3">These ensure the integrity of the investigation by providing proof of data authenticity and preservation of the original evidence and </string>
-    <string name="record_text4">documentation, which can be used to achieve the same exact results if the usage of tools and methods are repeated.</string>
-    <string name="record_text5">These ensure the integrity of the investigation by providing proof of data authenticity and preservation of the original evidence and </string>
+    <string name="record_text1">[예시] \n음식명 : 시금치 파스타 \n음식 설명, 맛 평가 등 자유롭게 기입합니다</string>
+    <string name="record_text2">[예시] \n음식명 : 감자 샐러드 \n음식 설명, 맛 평가 등 자유롭게 기입합니다</string>
+    <string name="record_text3">[예시] \n음식명 : 월남쌈 \n음식 설명, 맛 평가 등 자유롭게 기입합니다 </string>
+    <string name="record_text4">[예시] \n음식명 : 호박죽 \n음식 설명, 맛 평가 등 자유롭게 기입합니다</string>
+    <string name="record_text5">[예시] \n음식명 : 과일 요거트 \n음식 설명, 맛 평가 등 자유롭게 기입합니다</string>
 
 </resources>
