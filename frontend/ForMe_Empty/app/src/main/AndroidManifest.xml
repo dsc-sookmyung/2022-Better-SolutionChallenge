@@ -15,6 +15,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
+            android:name=".PushActivity"
+            android:exported="false" />
+        <activity
             android:name=".WriteRecord"
             android:exported="false" />
         <!--

@@ -12,6 +12,7 @@
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_fragment_page2.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_fragment_page3.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_push.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/activity_write_record.xml" value="0.23076923076923078" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/fragment_board.xml" value="0.2" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/fragment_home.xml" value="0.1" />
@@ -23,6 +24,7 @@
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/list_item_record.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/layout/record_page_list_view.xml" value="0.1" />
         <entry key="..\:/Android/ForMe_Empty/app/src/main/res/menu/bottom_nav.xml" value="0.1" />
+        <entry key="..\:/Android/ForMe_Empty/app/src/main/res/menu/navi_menu.xml" value="0.24947916666666667" />
       </map>
     </option>
   </component>
