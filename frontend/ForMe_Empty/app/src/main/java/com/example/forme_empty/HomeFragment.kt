@@ -3,6 +3,7 @@
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Build.VERSION_CODES
 import android.os.Bundle
@@ -38,6 +39,18 @@ private const val ARG_PARAM2 = "param2"
  */
 class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
+    //AlarmActivity로 이동하기 위한 선언
+    // 1. Context를 받아올 변수 선언
+    lateinit var mainActivity: MainActivity
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        // 2. Context를 Activity로 형변환하여 할당
+        mainActivity = context as MainActivity
+
+    }
+
+
 
 
     //레트로핏
@@ -255,4 +268,17 @@ class HomeFragment : Fragment() {
                 }
         }
     }
+
+    //Button참조해서 리스너 달기
+    override fun onStart() {
+        super.onStart()
+
+        val alarmButton = mainActivity.findViewById<Button>(R.id.alarm)
+        val intent = Intent(getActivity(), PushActivity::class.java)
+        alarmButton.setOnClickListener {
+            startActivity(intent)
+        }
+
+    }
+
 }
