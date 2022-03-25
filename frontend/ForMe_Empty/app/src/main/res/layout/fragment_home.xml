@@ -26,6 +26,12 @@
                 android:layout_height="wrap_content"
                 android:text="레트로핏 테스트"
                 android:id="@+id/retrofit"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="알림 테스트"
+                android:id="@+id/alram"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

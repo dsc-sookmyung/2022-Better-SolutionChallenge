@@ -1,9 +1,12 @@
 package com.example.forme_empty
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContentProviderCompat.requireContext
@@ -28,5 +31,15 @@ class WriteRecord : AppCompatActivity() {
         ) 
 */
 
+        //Button참조해서 리스너 달기
+        //registration페이지로 이동하기 위한 인덴트 생성
+        val MainActivityIntent = Intent(this, MainActivity::class.java)
+        val finButton: Button = findViewById(R.id.fin_button)
+        finButton.setOnClickListener {
+            startActivity(MainActivityIntent)
+        }
+
     }
+
+
 }

@@ -1,10 +1,15 @@
 package com.example.forme_empty
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +17,30 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //알람설정
+/*
+        var builder = NotificationCompat.Builder(this, "MY_channel")
+            .setSmallIcon(R.drawable.toma)
+            .setContentTitle("알림 제목")
+            .setContentText("알림 내용")
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.0) {
+            val channel_id = "My_channel"
+            val channel_name = "채널이름"
+            val descriptionText = "설명글"//채널 설명글 설정
+            val importance = NotificationManager.IMPORTANCE_DEFAULT//알림 우선순위 설정
+            val channel = NotificationChannel(channel_id, channel_name, importance).apply {
+                description = descriptionText
+            }
+
+            //만든 채널 정보를 시스템에 등록
+            val notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+
+            //알림 표시 : 알림 고유 ID, 알림 결과
+            notificationManager.notify(1002, builder.build())
+        }
+*/
 
         //음식기록페이지로 이동하기 위한 인덴트 생성
 /*

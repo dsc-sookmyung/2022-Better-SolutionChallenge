@@ -1,12 +1,20 @@
  package com.example.forme_empty
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import android.os.Build
+import android.os.Build.VERSION_CODES
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.NotificationCompat
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.forme_empty.adapter.RecordItemAdapter
@@ -30,6 +38,8 @@ private const val ARG_PARAM2 = "param2"
  */
 class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
+
+
     //레트로핏
     val api = APIS.create()
     val binding by lazy { com.example.forme_empty.databinding.FragmentHomeBinding.inflate(layoutInflater) }
@@ -55,6 +65,37 @@ class HomeFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+        //알람설정
+/*
+        var alram = binding.alram
+        alram.setOnClickListener {
+            var builder = NotificationCompat.Builder(this, "MY_channel")
+                .setSmallIcon(R.drawable.toma)
+                .setContentTitle("알림 제목")
+                .setContentText("알림 내용")
+
+            if (Build.VERSION.SDK_INT >= VERSION_CODES .0) {
+            val channel_id = "My_channel"
+            val channel_name = "채널이름"
+            val descriptionText = "설명글"//채널 설명글 설정
+            val importance = NotificationManager.IMPORTANCE_DEFAULT//알림 우선순위 설정
+            val channel = NotificationChannel(channel_id, channel_name, importance).apply {
+                description = descriptionText
+            }
+
+            //만든 채널 정보를 시스템에 등록
+            val notificationManager: NotificationManager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+
+            //알림 표시 : 알림 고유 ID, 알림 결과
+            notificationManager.notify(1002, builder.build())
+        }
+
+        }
+
+ */
+
 
         binding.retrofit.setOnClickListener {
             api.get_users().enqueue(object : Callback<HTTP_GET_Model> {
@@ -140,7 +181,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recordRecyclerView.setHasFixedSize(true) //lazy접근
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= VERSION_CODES.M) {
             recordRecyclerView.layoutManager = LinearLayoutManager(context)
             //.also { it.orientation = LinearLayoutManager.HORIZONTAL }
         }
@@ -164,7 +205,7 @@ class HomeFragment : Fragment() {
         }
 
         recommendRecyclerView.setHasFixedSize(true) //lazy접근
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= VERSION_CODES.M) {
             recommendRecyclerView.layoutManager = LinearLayoutManager(context)
             //.also { it.orientation = LinearLayoutManager.HORIZONTAL }
         }
