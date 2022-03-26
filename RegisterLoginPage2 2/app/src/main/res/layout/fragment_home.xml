@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.core.widget.NestedScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="https://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:descendantFocusability="blocksDescendants"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_home1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="casual"
+                android:text="🔥 나의 다짐 🔥"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_home1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="casual"
+                android:text="· 매주 목요일은 채식 요일입니다 \n· 목표는 오보 베지테리언이군요!"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="30dp"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/lightGreenBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/light_green_round_rectangle"
+                    app:srcCompat="@drawable/light_green_round_rectangle"
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    tools:srcCompat="@drawable/light_green_round_rectangle" />
+
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="230dp"
+                    android:layout_height="230dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/lightGreenBox"
+                    app:layout_constraintEnd_toEndOf="@+id/lightGreenBox"
+                    app:layout_constraintHorizontal_bias="0.494"
+                    app:layout_constraintStart_toStartOf="@+id/lightGreenBox"
+                    app:layout_constraintTop_toTopOf="@+id/lightGreenBox"
+                    app:srcCompat="@drawable/toma"
+                    tools:src="@drawable/toma"
+                    tools:srcCompat="@drawable/toma" />
+
+                <View
+                    android:id="@+id/speech"
+                    android:layout_width="366dp"
+                    android:layout_height="79dp"
+                    android:layout_margin="20dp"
+                    android:background="#C960BA62"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/lightGreenBox"
+                    app:layout_constraintEnd_toEndOf="@+id/lightGreenBox"
+                    app:layout_constraintHorizontal_bias="0.476"
+                    app:layout_constraintStart_toStartOf="@+id/lightGreenBox"
+                    app:layout_constraintTop_toTopOf="@+id/lightGreenBox"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/title_home2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="casual"
+                android:text="# 나의 식단 기록"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!--
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            >
+            -->
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scrollbarFadeDuration="0"
+                app:layoutManager="LinearLayoutManager">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <!--
+                        </RelativeLayout>
+            -->
+
+            <!--
+                        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            tools:context=".MainActivity">
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/record_recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="horizontal"
+                                app:layoutManager="LinearLayoutManager" />
+
+                        </FrameLayout>
+            -->
+
+            <ImageView
+                android:layout_width="346dp"
+                android:layout_height="200dp"
+                android:src="@drawable/round_background_border"/>
+
+
+            <TextView
+                android:id="@+id/title_home3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="casual"
+                android:text="# 오늘은 뭐 먹지?"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommend_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scrollbarFadeDuration="0"
+                app:layoutManager="LinearLayoutManager">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <ImageView
+                android:layout_width="346dp"
+                android:layout_height="200dp"
+                android:src="@drawable/round_background_border"
+                android:layout_marginBottom="40dp"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>
