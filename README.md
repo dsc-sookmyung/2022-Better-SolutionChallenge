@@ -55,7 +55,8 @@ Member </br>
 
 ### 4. Recommendation Recipe
 
-![recomm](https://user-images.githubusercontent.com/51512016/160971607-39c2b0fb-fdf2-43ac-b0ca-9173be0412cc.png)
+![recomm](https://user-images.githubusercontent.com/51512016/160971926-a93720ff-7e98-419f-86eb-2e3b58556468.png)
+
 
 
 
