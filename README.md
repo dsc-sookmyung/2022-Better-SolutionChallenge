@@ -10,11 +10,8 @@ Member </br>
 
 🛠 Tech Stack 🛠 :</br>  <img src="https://img.shields.io/badge/-kotlin-lightgrey"> <img src="https://img.shields.io/badge/-spring%20boot-green"> </br>
 
-🛠 *Tools & Platforms* 🛠 :</br> <img src="https://img.shields.io/badge/-heroku-%2340AEF0"> <img src="https://img.shields.io/badge/-IntelliJ-%230B2C4A">
-<img src="https://img.shields.io/badge/-Android%20Studio-%2300B388"> <img src="https://img.shields.io/badge/-JawsDB-%234053D6"> <img src="https://img.shields.io/badge/-notion-%23FF9900">
-
-
-
+🛠 *Tools & Platforms* 🛠 :</br>
+(intelliJ, Notion, GCP)
 --- 
 
 ### 🌏 Problem
