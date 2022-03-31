@@ -1,10 +1,10 @@
 # 1W1M
-## Team Better�
+### Team Better
 
 **Better**'s project
 Member </br>
-- Frontend : [YangHyeonS](https://github.com/YangHyeonS), [BoKyung124](https://github.com/BoKyung124) </br>
-- Backend : [Eundongdong](https://github.com/Eundongdong), [jiaeYoon](https://github.com/jiaeYoon) </br>
+- Frontend : [@YangHyeonS](https://github.com/YangHyeonS), [@BoKyung124](https://github.com/BoKyung124) </br>
+- Backend : [@Eundongdong](https://github.com/Eundongdong), [@jiaeYoon](https://github.com/jiaeYoon) </br>
 
 ---
 
@@ -31,9 +31,31 @@ Member </br>
 
 1. Sign up page </br>
 2. Main page </br>
-3. Recipe recommendation </br>
-4. Diet record </br>
+3. Diet record </br>
+4. Recipe recommendation </br>
 5. Setting </br>
+
+
+### 1. Sign up page 
+
+![signup](https://user-images.githubusercontent.com/51512016/160971301-c6d31898-afad-4b2a-9ef0-670ae17dae31.png)
+
+### 2. Main page
+![mainpage1](https://user-images.githubusercontent.com/51512016/160971396-b60a94e5-f308-4f3e-8778-e10ad3a26553.png)
+
+![mainpage2](https://user-images.githubusercontent.com/51512016/160971500-4ddf75aa-6017-4db4-9c3b-22e70e75b5aa.png)
+
+### 3. Diet record
+
+![dietRecord](https://user-images.githubusercontent.com/51512016/160971719-f674d3ec-a69c-408a-9121-f55a07b318f0.png)
+
+![dietRecord2](https://user-images.githubusercontent.com/51512016/160971797-85f26730-7abc-444d-8330-36eaa23ede7b.png)
+
+
+
+### 4. Recommendation Recipe
+
+![recomm](https://user-images.githubusercontent.com/51512016/160971607-39c2b0fb-fdf2-43ac-b0ca-9173be0412cc.png)
 
 
 
