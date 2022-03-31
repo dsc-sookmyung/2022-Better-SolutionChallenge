@@ -40,8 +40,8 @@ Member </br>
 
 ![signup](https://user-images.githubusercontent.com/51512016/160971301-c6d31898-afad-4b2a-9ef0-670ae17dae31.png)
 
-This is the sign-up page that appears when you run the app for the first time. 
-To motivate users through goal setting, it asks the current vegal level, the target vegan level, the target vegan day, and whether to set a reminder.
+This is the sign-up page that appears when you run the app for the first time.  
+To motivate users through goal setting, it asks the current vegal level, the target vegan level, the target vegan day, and whether to set a reminder.  
 
 ### 2. Main page
 ![mainpage1](https://user-images.githubusercontent.com/51512016/160971396-b60a94e5-f308-4f3e-8778-e10ad3a26553.png)  
@@ -75,11 +75,11 @@ You can check the ingredients and see if they meet your goal.
 
 ![recomm](https://user-images.githubusercontent.com/51512016/160971926-a93720ff-7e98-419f-86eb-2e3b58556468.png)
 
-This is the vegan recipe recommendation page. 
-It consists of three buttons: Record Recipe, View Recipe List, and Recommnd Today's Recipe.
-'Record Recipe' is a page to record your vegan recipes. You can write ingredients, recipes, vegan level, and more, and share them with other users.
-'View Recipe List' is a page where you can see your recipe history and other people's recipe history you have scraped.
-'Today's Recipe Recommendation' is a page where you can get menu recommendations when there are no vegan menu that come to mind. You can view it in card format below, and click the button to see detailed recipes.
+This is the vegan recipe recommendation page.   
+It consists of three buttons: Record Recipe, View Recipe List, and Recommnd Today's Recipe.  
+'Record Recipe' is a page to record your vegan recipes. You can write ingredients, recipes, vegan level, and more, and share them with other users.  
+'View Recipe List' is a page where you can see your recipe history and other people's recipe history you have scraped.  
+'Today's Recipe Recommendation' is a page where you can get menu recommendations when there are no vegan menu that come to mind. You can view it in card format below, and click the button to see detailed recipes.  
 
 
 ---
