@@ -40,6 +40,9 @@ Member </br>
 
 ![signup](https://user-images.githubusercontent.com/51512016/160971301-c6d31898-afad-4b2a-9ef0-670ae17dae31.png)
 
+This is the sign-up page that appears when you run the app for the first time. 
+To motivate users through goal setting, it asks the current vegal level, the target vegan level, the target vegan day, and whether to set a reminder.
+
 ### 2. Main page
 ![mainpage1](https://user-images.githubusercontent.com/51512016/160971396-b60a94e5-f308-4f3e-8778-e10ad3a26553.png)  
 This is the main page.  
