@@ -3,8 +3,8 @@
 
 **Better**'s project
 Member </br>
-- Front : [양현서](https://github.com/YangHyeonS), [이보경](https://github.com/BoKyung124) </br>
-- Back : [김은지](https://github.com/Eundongdong), [윤지애](https://github.com/jiaeYoon) </br>
+- Frontend : [YangHyeonS](https://github.com/YangHyeonS), [BoKyung124](https://github.com/BoKyung124) </br>
+- Backend : [Eundongdong](https://github.com/Eundongdong), [jiaeYoon](https://github.com/jiaeYoon) </br>
 
 ---
 
@@ -15,12 +15,10 @@ Member </br>
 
 
 
----
-<img src="https://user-images.githubusercontent.com/51512016/152601603-8c438614-f21e-46cf-911c-9131d7d19ce1.png" width="15%" />
-  
+--- 
 
 ### 🌏 Problem
-- One-quarter of the global greenhouse gases are related to food production and consumption, 80% of which are related to livestock.
+- One-quarter of the global greenhouse gases are related to food production and consumption, 80% of which are related to livestock.</br>
 -If you switch to a vegetarian diet by 2050, greenhouse gases can be reduced by 63 percent and cost $973 billion.
 
  ### 🌏 Climate behavior Solution
@@ -44,14 +42,14 @@ Member </br>
 
 ---
 ### Backend Part
-- RESTful API
-- CRUD feature
-- Google Cloud Platform
-  - VM Instance
-  - SQL
-  - Cloud Storage
-- Swagger
-- JPA Auditing
+- RESTful API</br>
+- CRUD feature</br>
+- Google Cloud Platform</br>
+  - VM Instance</br>
+  - SQL</br>
+  - Cloud Storage</br>
+- Swagger</br>
+- JPA Auditing</br>
 
 ---
 ### Project Settings
