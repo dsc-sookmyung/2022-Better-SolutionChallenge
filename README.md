@@ -73,7 +73,7 @@ You can check the ingredients and see if they meet your goal.
 
 ### 4. Recommendation Recipe
 
-![recommend](https://user-images.githubusercontent.com/53086873/161037000-1b52cbad-414f-4d58-ad62-ff09bd9ad2ce.png)
+![20220331_194602](https://user-images.githubusercontent.com/53086873/161038038-99dc143f-013f-4150-92f8-78b40dcb819c.jpg)
 
 This is the vegan recipe recommendation page.   
 It consists of three buttons: Record Recipe, View Recipe List, and Recommnd Today's Recipe.  
