@@ -81,6 +81,13 @@ It consists of three buttons: Record Recipe, View Recipe List, and Recommnd Toda
 'View Recipe List' is a page where you can see your recipe history and other people's recipe history you have scraped.  
 'Today's Recipe Recommendation' is a page where you can get menu recommendations when there are no vegan menu that come to mind. You can view it in card format below, and click the button to see detailed recipes.  
 
+### 5. My Page
+
+![마이페이지 캡처](https://user-images.githubusercontent.com/66189747/161913180-b65f92a8-51e3-43b9-b5f3-3106ff566126.png)  
+  
+This is the My Page.
+Users can check vegetarian goals, current stages, and vegetarian days.
+And they can strengthen their mind by checking the collected badges.
 
 ---
 ### Backend Part
