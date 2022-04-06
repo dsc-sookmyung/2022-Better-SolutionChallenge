@@ -38,13 +38,13 @@ Member </br>
 
 ### 1. Sign up page 
 
-![signup](https://user-images.githubusercontent.com/51512016/160971301-c6d31898-afad-4b2a-9ef0-670ae17dae31.png)
+![signup](https://user-images.githubusercontent.com/68904755/161912142-fab662ba-1ca6-4068-af8b-49f699840909.png)
 
 This is the sign-up page that appears when you run the app for the first time.  
 To motivate users through goal setting, it asks the current vegal level, the target vegan level, the target vegan day, and whether to set a reminder.  
 
 ### 2. Main page
-![mainpage1](https://user-images.githubusercontent.com/51512016/160971396-b60a94e5-f308-4f3e-8778-e10ad3a26553.png)  
+![mainpage1](https://user-images.githubusercontent.com/68904755/161912266-56517309-6630-4fa9-a97b-28f8929fd5bf.png)  
 
 This is the main page.  
 You can check your vegetarian days and goals.  
@@ -52,20 +52,20 @@ The cute tomato character will encourage users.
 Experience point and level accumulated by the user's activities will make the user more enthusiastic.  
   
 
-![mainpage2](https://user-images.githubusercontent.com/51512016/160971500-4ddf75aa-6017-4db4-9c3b-22e70e75b5aa.png)  
+![mainpage2](https://user-images.githubusercontent.com/68904755/161912423-986bdc49-b2af-4f60-a6c5-e6448b3ed345.png)  
 
 Below the tomato character, you can see my diet history and today's menu recommendations.  
 If you want to take a closer look, you can go to the menu at the bottom bar.  
 
 ### 3. Diet record
 
-![dietRecord](https://user-images.githubusercontent.com/51512016/160971719-f674d3ec-a69c-408a-9121-f55a07b318f0.png)  
+![dietRecord](https://user-images.githubusercontent.com/68904755/161912548-5383790c-284d-4c74-b2ee-1f6232cc8fbf.png)  
 
 This is the diet record page.  
 Here you can see the history of past diets.  
 Press the diary button to record what you ate today.  
 
-![dietRecord2](https://user-images.githubusercontent.com/51512016/160971797-85f26730-7abc-444d-8330-36eaa23ede7b.png)
+![dietRecord2](https://user-images.githubusercontent.com/68904755/161912616-eb5d0122-9fb1-4d93-b11d-e9acc377b62c.png)
 
 You can record your diet on the day you press the diary button, and you can freely write down the name of the food, explanation of the food, and reviews.  
 You can check the ingredients and see if they meet your goal.  
@@ -73,7 +73,7 @@ You can check the ingredients and see if they meet your goal.
 
 ### 4. Recommendation Recipe
 
-![20220331_194602](https://user-images.githubusercontent.com/53086873/161038038-99dc143f-013f-4150-92f8-78b40dcb819c.jpg)
+![20220331_194602](https://user-images.githubusercontent.com/68904755/161913687-24f69fd8-40c8-4374-a678-1b282a4faf41.png)
 
 This is the vegan recipe recommendation page.   
 It consists of three buttons: Record Recipe, View Recipe List, and Recommnd Today's Recipe.  
